@@ -1,11 +1,9 @@
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <div *ngFor = "let emp of employeesInfo"> 
-    <p>{{emp.firstName}}</p>
-    <p>{{emp.lastName}}</p>
-  </div>
-
-
-
-
+<h1 style="text-align: center">
+  Welcome to {{title}}!
+</h1>
+<h3 style="text-align: center">ALL employeesInfo here</h3>
+<hr>
+<div *ngFor="let emp of employeesInfo" style="text-align: center">
+  <p><b>Emp ID</b>  {{emp.id}}<b>  First Name is :</b> {{emp.firstName}} <b>Last Name is :</b> {{emp.lastName}}</p>
+</div>
+<hr>
