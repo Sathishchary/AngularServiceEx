@@ -9,7 +9,7 @@ import { Http } from '@angular/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit  {
-  title = 'app';
+  title = 'Angular Service app';
   employeesInfo: Employee;
   data: any;
   constructor(public referService: ReferenceService, public http: Http) { }
