@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { Http } from '@angular/http';
+import { ReferenceService } from './services/reference.service';
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpModule
   ],
-  providers: [],
+  providers: [ReferenceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
