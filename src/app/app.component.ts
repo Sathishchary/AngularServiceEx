@@ -10,13 +10,13 @@ import { Http } from '@angular/http';
 })
 export class AppComponent implements OnInit  {
   title = 'Angular Service app';
-  employeesInfo: Employee[];
-  data: any;
+  employeesInfo: any;
+  employeesInfoModal: any;
   response: Employee[];
   constructor(public referService: ReferenceService, public http: Http) { }
   getAllEmployees() {
     this.referService.getAllEmployees()
-      .subscribe((result: Employee[]) => {
+      .subscribe((result: any) => {
        console.log('the employess data:' + result);
        this.employeesInfo = result;
       },
@@ -25,11 +25,10 @@ export class AppComponent implements OnInit  {
       });
    }
     allemployees() {
-         this.referService.getAllEmps().then(response => this.employeesInfo = response);
+         this.referService.getAllEmps().then(response => this.employeesInfoModal = response);
     }
     ngOnInit() {
       this.getAllEmployees();
-      this.allemployees();
-      console.log(this.data);
+       this.allemployees();
     }
 }

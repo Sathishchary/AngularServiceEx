@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { Http } from '@angular/http';
 import { ReferenceService } from './services/reference.service';
 
-
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +12,7 @@ import { ReferenceService } from './services/reference.service';
   imports: [
     BrowserModule, HttpModule
   ],
-  providers: [ReferenceService],
+  providers: [ReferenceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

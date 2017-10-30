@@ -15,7 +15,9 @@ export class ReferenceService {
   }
   getAllEmployees(): Observable<any> {
     try {
-       return this.http.get('JsonFile/service.json');
+       return this.http.get('http://localhost:4200/assets/service.json')
+       .map(this.extractData)
+       .catch(this.handleError);
       } catch (error) { console.log(error); }
   }
    extractData(res: any) {
