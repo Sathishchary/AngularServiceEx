@@ -1,15 +1,23 @@
-<h1 style="text-align: center">
-  Welcome to {{title}}!
-</h1>
-<h3>First way in service with Json file</h3>
-<h3 style="text-align: center">ALL employeesInfo here</h3>
+<h1 style="text-align: center">Welcome to {{title}}!</h1>
+<h3>Service with Json file</h3>
+<h3 style="text-align: center">All EmployeesInfo here</h3>
 <hr>
-<div *ngFor="let emp of employeesInfo" style="text-align: center">
-  <p><b>Emp ID</b>  {{emp.id}}<b>  First Name is :</b> {{emp.firstName}} <b>Last Name is :</b> {{emp.lastName}}</p>
-</div>
-<hr>
-<h3>second way in service with modal class</h3>
-<div *ngFor="let emp of employeesInfoModal" style="text-align: center">
-  <p><b>Emp ID</b>  {{emp.id}}<b>  First Name is :</b> {{emp.firstName}} <b>Last Name is :</b> {{emp.lastName}}</p>
+<div style="text-align: center">
+<table class="table table-striped table-hover table-bordered" style="text-align: center;">
+	<thead>
+		<tr>
+			<th>EMP ID</th>
+			<th>FIRST NAME</th>
+			<th>LAST NAME</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let emp of employeesInfo;">
+			<td>{{emp.id}}</td>
+			<td>{{emp.firstName}}</td>
+			<td>{{emp.lastName}}</td>
+		</tr>
+	</tbody>
+</table>
 </div>
 <hr>

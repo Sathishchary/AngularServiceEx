@@ -11,8 +11,6 @@ import { Http } from '@angular/http';
 export class AppComponent implements OnInit  {
   title = 'Angular Service app';
   employeesInfo: any;
-  employeesInfoModal: any;
-  response: Employee[];
   constructor(public referService: ReferenceService, public http: Http) { }
   getAllEmployees() {
     this.referService.getAllEmployees()
@@ -20,15 +18,11 @@ export class AppComponent implements OnInit  {
        console.log('the employess data:' + result);
        this.employeesInfo = result;
       },
-      (error: any) => {
+      (error) => {
         console.log('done employees method');
       });
    }
-    allemployees() {
-         this.referService.getAllEmps().then(response => this.employeesInfoModal = response);
-    }
     ngOnInit() {
       this.getAllEmployees();
-       this.allemployees();
     }
 }
